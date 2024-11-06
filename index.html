@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendaciones de Música</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Pantalla de Inicio -->
+    <section id="inicio">
+        <h1>Bienvenido a tu Recomendador Musical</h1>
+        <p>Selecciona cómo quieres obtener tus recomendaciones:</p>
+        <button onclick="mostrarAnalisisSentimientos()">Análisis de Sentimientos</button>
+        <button onclick="mostrarCuestionario()">Cuestionario Interactivo</button>
+        <button onclick="mostrarWearables()">Integración con Wearables</button>
+    </section>
+
+    <!-- Análisis de Sentimientos -->
+    <section id="analisisSentimientos" style="display: none;">
+        <h2>Conectar Redes Sociales</h2>
+        <p>Conéctate para analizar tus publicaciones y obtener recomendaciones personalizadas.</p>
+        <button onclick="mostrarRecomendaciones('sentimientos')">Conectar Redes Sociales</button>
+        <button onclick="volverInicio()">Volver</button>
+    </section>
+
+    <!-- Cuestionario de Estado de Ánimo -->
+    <section id="cuestionario" style="display: none;">
+        <h2>Cuestionario Interactivo</h2>
+        <form id="formCuestionario">
+            <label>Selecciona tu estado de ánimo:</label>
+            <select id="estadoAnimo">
+                <option value="feliz">Feliz</option>
+                <option value="triste">Triste</option>
+                <option value="motivado">Motivado</option>
+                <option value="relajado">Relajado</option>
+            </select>
+            <button type="button" onclick="mostrarRecomendaciones('cuestionario')">Ver Recomendaciones</button>
+        </form>
+        <button onclick="volverInicio()">Volver</button>
+    </section>
+
+    <!-- Integración con Wearables -->
+    <section id="wearables" style="display: none;">
+        <h2>Conectar tu Dispositivo</h2>
+        <p>Conecta tu wearable para obtener recomendaciones basadas en tu frecuencia cardíaca y otros indicadores emocionales.</p>
+        <button onclick="mostrarRecomendaciones('wearables')">Conectar Wearable</button>
+        <button onclick="volverInicio()">Volver</button>
+    </section>
+
+    <!-- Resultados de Recomendación -->
+    <section id="resultados" style="display: none;">
+        <h2>Recomendaciones para ti</h2>
+        <div id="recomendaciones">
+            <!-- Aquí se mostrarán las recomendaciones -->
+        </div>
+        <button onclick="reiniciar()">Volver al Inicio</button>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
